@@ -1,0 +1,120 @@
+.seances {
+    padding: 30vh 0;
+    background-image: url('/images/bg-seances.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: -140px;
+    min-height: 1000px;
+
+    .img-wrapper {
+        width: 200px;
+        height: 200px;
+        border-radius: 130px;
+        background-image: url('/images/seances1.jpg');
+        background-size: cover;
+        background-position: -80px;
+    }
+    .text-wrapper {
+        margin-top: -10%;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            font-family: $secondary-font-black;
+            font-size: 1.313rem;
+            color: $color-005;
+        }
+    }
+    .container {
+        > ul {
+            margin-top: 90px;
+            position: relative;
+            li {
+                position: absolute;
+                list-style: none;
+                cursor: pointer;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        #group ul {
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .details-seances {
+            background-color: $color-010;
+            padding: 45px 25px;
+            border-radius: 20px;
+            max-width: 55%;
+            margin: 200px auto;
+            visibility: hidden;
+            position: relative;
+            i {
+                color: $color-002;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+            }
+            p {
+                color: $color-002;
+            }
+            ul {
+                margin-bottom: 20px;
+                margin-left: 50px;
+            }
+
+            li {
+                color: $color-002;
+                font-size: 1.313rem;
+            }
+            .adapt {
+                color: $color-011;
+            }
+        }
+    }
+
+    .group li {
+        list-style: none;
+    }
+}
+
+#list-1 {
+    left: 7%;
+}
+
+#list-2 {
+    left: 30%;
+}
+
+#list-3 {
+    left: 50%;
+}
+
+#list-4 {
+    left: 73%;
+}
+
+.toleft {
+    left: 0 !important;
+    transition: 1s;
+}
+.to-origin-1 {
+    left: 7% !important;
+    transition: 1s;
+}
+.to-origin-2 {
+    left: 30% !important;
+    transition: 1s;
+}
+.to-origin-3 {
+    left: 50% !important;
+    transition: 1s;
+}
+.to-origin-4 {
+    left: 73% !important;
+    transition: 1s;
+}

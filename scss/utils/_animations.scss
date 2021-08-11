@@ -1,0 +1,39 @@
+@keyframes disparition {
+    0% {
+        visibility: visible;
+        opacity: 100%;
+    }
+    90% {
+        visibility: visible;
+        opacity: 0%;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0%;
+    }
+}
+
+@keyframes display {
+    0% {
+        visibility: hidden;
+        opacity: 0%;
+    }
+    10% {
+        visibility: visible;
+        opacity: 0%;
+    }
+    100% {
+        visibility: visible;
+        opacity: 100%;
+    }
+}
+
+.display {
+    animation: display 2s;
+    animation-fill-mode: forwards;
+}
+
+.no-display {
+    animation: disparition 1s;
+    animation-fill-mode: forwards;
+}

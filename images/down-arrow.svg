@@ -1,0 +1,24 @@
+            <svg id="flèche" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="136" height="136" viewBox="0 0 136 136">
+                <defs>
+                    <clipPath id="clip-path">
+                        <circle id="Ellipse16" data-name="Ellipse 16" cx="68" cy="68" r="68" transform="translate(650 798)" fill="#fff" />
+                    </clipPath>
+                </defs>
+                <g id="fleche" data-name="fleche " transform="translate(934 -650) rotate(90)" clip-path="url(#clip-path)">
+                    <g id="right-arrow" transform="translate(650 798)">
+                        <g id="Groupe_58" data-name="Groupe 58" transform="translate(3.254 5.859)">
+                            <path
+                                id="Tracé_49"
+                                data-name="Tracé 49"
+                                d="M116.848,57.793l-42.883-44.4a6.361,6.361,0,0,0-9.192,0L60.88,17.424a6.8,6.8,0,0,0-1.9,4.758A6.937,6.937,0,0,0,60.88,27L85.9,52.956H6.415A6.456,6.456,0,0,0,0,59.572v5.7a6.715,6.715,0,0,0,6.415,6.909H86.181l-25.3,26.1a6.831,6.831,0,0,0,0,9.449l3.893,4.019a6.362,6.362,0,0,0,9.192-.009l42.883-44.4a6.958,6.958,0,0,0,0-9.551Z"
+                                transform="translate(0 0)"
+                                fill="#fff"
+                            />
+                        </g>
+                    </g>
+                </g>
+                <g id="Ellipse_17" data-name="Ellipse 17" fill="none" stroke="#fff" stroke-width="15">
+                    <circle cx="68" cy="68" r="68" stroke="none" />
+                    <circle cx="68" cy="68" r="60.5" fill="none" />
+                </g>
+            </svg>

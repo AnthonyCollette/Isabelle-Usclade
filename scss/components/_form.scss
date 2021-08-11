@@ -1,0 +1,36 @@
+form {
+    max-width: 675px;
+    input,
+    textarea {
+        background-color: $color-012;
+        border: none;
+        color: $color-005;
+        border-radius: 34px;
+        padding: 10px 25px;
+        width: 100%;
+        margin-bottom: 15px;
+        &:active,
+        &:focus {
+            background-color: $color-011;
+            outline: none;
+        }
+        &::placeholder {
+            color: $color-005;
+        }
+    }
+    .form-wrapper {
+        display: flex;
+        justify-content: space-between;
+        input {
+            width: 49%;
+        }
+    }
+    .btn-send {
+        @extend button;
+        width: 50%;
+        margin-right: 0;
+    }
+    .btn-wrapper {
+        text-align: center;
+    }
+}

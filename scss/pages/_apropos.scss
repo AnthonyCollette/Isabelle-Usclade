@@ -1,0 +1,39 @@
+.apropos {
+    padding: 120px 0;
+    margin-bottom: 200px;
+    h3 {
+        margin-bottom: 50px;
+    }
+    a {
+        font-size: 3.438rem;
+        color: $color-001;
+        font-family: $primary-font;
+        display: flex;
+        align-items: center;
+    }
+    .triangle {
+        height: 0;
+        width: 0;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 43px solid $color-006;
+        margin-right: 20px;
+        transition: 0.4s;
+    }
+    .card {
+        border: none;
+        padding-left: 120px;
+        background: none;
+        p {
+            max-width: 60%;
+            margin-bottom: 30px;
+        }
+        li {
+            font-size: 1.313rem;
+            max-width: 60%;
+        }
+        strong {
+            color: $color-001;
+        }
+    }
+}

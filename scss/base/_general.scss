@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+}
+
+.container {
+    max-width: 85%;
+}
+
+a {
+    transition: 0.2s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+strong {
+    font-family: $secondary-font-black;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.display-block {
+    display: block !important;
+}

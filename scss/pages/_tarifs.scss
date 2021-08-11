@@ -1,0 +1,127 @@
+.tarifs {
+    position: relative;
+    padding-bottom: 300px;
+    min-height: 800px;
+    > img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: -100px;
+    }
+    .container {
+        padding: 150px 0 0 0;
+        > a {
+            font-size: 1.313rem;
+
+            display: block;
+            text-align: center;
+        }
+        .estimation {
+            max-width: 63%;
+        }
+    }
+    .tarifs-para {
+        font-size: 2.125rem;
+        color: $color-010;
+        max-width: 60%;
+        margin-top: 50px;
+    }
+    h4 {
+        max-width: 60%;
+        text-align: center;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 40px;
+            background-color: $color-009;
+            z-index: -1;
+            top: 20px;
+            left: 15%;
+            transform: skew(320deg) rotate(356deg);
+        }
+    }
+    .img-wrapper {
+        width: 200px;
+        height: 200px;
+        border-radius: 130px;
+        background-image: url('/images/seances1.jpg');
+        background-size: cover;
+        background-position: -80px;
+    }
+    .container > ul {
+        list-style: none;
+        margin-bottom: 400px;
+        margin-top: 100px;
+        position: relative;
+        margin-left: 0;
+        padding-left: 0;
+        li {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            z-index: 2;
+            .text-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: -10%;
+                z-index: 999;
+            }
+            p {
+                font-family: $secondary-font-black;
+                font-size: 1.313rem;
+                color: $color-005;
+            }
+        }
+    }
+    #list-5 {
+        left: 5%;
+    }
+
+    #list-6 {
+        left: 27%;
+    }
+
+    #list-7 {
+        left: 51%;
+    }
+
+    #list-8 {
+        left: 73%;
+    }
+    .details-tarifs {
+        background-color: $color-010;
+        padding: 45px 25px;
+        border-radius: 20px;
+        max-width: 55%;
+        margin: -200px auto 100px auto;
+        visibility: hidden;
+        position: relative;
+        i {
+            color: $color-002;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        p {
+            color: $color-002;
+        }
+        ul {
+            margin-bottom: 20px;
+            margin-left: 50px;
+            list-style: none;
+        }
+
+        li {
+            color: $color-002;
+            font-size: 1.313rem;
+        }
+        .adapt {
+            color: $color-011;
+        }
+    }
+}

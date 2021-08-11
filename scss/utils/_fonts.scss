@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Verveine Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../fonts/VerveineRegular.woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../fonts/Segoe\ UI.woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../fonts/Segoe\ UI\ Italic.woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../fonts/Segoe\ UI\ Bold.woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../fonts/Segoe\ UI\ Bold\ Italic.woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Black';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../fonts/seguibl.ttf');
+}
+
+$primary-font: 'Verveine Regular';
+$secondary-font-regular: 'Segoe UI Regular';
+$secondary-font-italic: 'Segoe UI Italic';
+$secondary-font-bold: 'Segoe UI Bold';
+$secondary-font-bold-italic: 'Segoe UI Bold Italic';
+$secondary-font-black: 'Segoe UI Black';
+h1 {
+    color: $color-001;
+    font-family: $secondary-font-black;
+    font-weight: 900;
+    font-size: 3.438rem;
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 90%;
+        height: 30px;
+        background-color: $color-005;
+        z-index: -1;
+        top: 30px;
+        left: 30px;
+        transform: skew(320deg) rotate(356deg);
+    }
+}
+
+header h1 {
+    color: $color-002;
+    font-family: $primary-font;
+    font-size: 9rem;
+    font-weight: 300;
+}
+
+h2 {
+    color: $color-002;
+    font-family: $secondary-font-regular;
+    font-size: 3.438rem;
+}
+
+h4 {
+    color: $color-005;
+    font-family: $secondary-font-black;
+    font-weight: 900;
+    font-size: 2.125rem;
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin-bottom: 0;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 70%;
+        height: 30px;
+        background-color: $color-009;
+        z-index: -1;
+        top: 10px;
+        left: 15%;
+        transform: skew(320deg) rotate(356deg);
+    }
+}
+
+h5 {
+    color: $color-002;
+    font-family: $secondary-font-black;
+    font-size: 1.313rem;
+    margin-bottom: 20px;
+}
+
+h6 {
+    font-family: $primary-font;
+    font-size: 3.438rem;
+    color: $color-001;
+}
+
+p {
+    color: $color-003;
+    font-family: $secondary-font-regular;
+    font-size: 1.313rem;
+}

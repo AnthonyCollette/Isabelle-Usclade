@@ -1,0 +1,21 @@
+{
+  "name": "isabelle-usclade",
+  "version": "1.0.0",
+  "description": "Site d'Isabelle Usclade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyCollette/Isabelle-Usclade.git"
+  },
+  "author": "Anthony Collette",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnthonyCollette/Isabelle-Usclade/issues"
+  },
+  "homepage": "https://github.com/AnthonyCollette/Isabelle-Usclade#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}

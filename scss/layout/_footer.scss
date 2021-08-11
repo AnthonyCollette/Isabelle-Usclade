@@ -1,0 +1,112 @@
+footer {
+    background-color: $color-007;
+    display: flex;
+    padding: 65px 10%;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    @media screen and (min-width: 1200px) {
+        padding: 65px 140px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .butterfly-footer-1 {
+        position: absolute;
+        bottom: 150%;
+        left: 22%;
+        transform: rotateY(180deg);
+        svg path {
+            fill: $color-006;
+        }
+    }
+    .butterfly-footer-2 {
+        position: absolute;
+        bottom: 110%;
+        left: 30%;
+        transform: rotateY(180deg) rotate(30deg);
+        svg path {
+            fill: $color-005;
+        }
+    }
+    .butterfly-footer-3 {
+        position: absolute;
+        bottom: 0%;
+        z-index: 998;
+        left: 105%;
+        transform: rotate(10deg);
+        @media screen and (min-width: 1200px) {
+            left: 78%;
+            bottom: 50%;
+        }
+        svg path {
+            fill: $color-008;
+        }
+    }
+
+    .mentions-wrapper {
+        position: relative;
+
+        a {
+            font-family: $secondary-font-bold;
+            font-size: 2.125rem;
+            margin: 20px 0 40px 0;
+            z-index: 999;
+            position: relative;
+            @media screen and (min-width: 1200px) {
+                margin: 0;
+            }
+        }
+    }
+    a {
+        color: $color-002;
+        &:hover {
+            color: $color-001;
+        }
+    }
+    p {
+        color: $color-002;
+        font-size: 1.313rem;
+        margin-bottom: 0;
+    }
+    span {
+        font-size: 2rem;
+        margin-right: 5px;
+    }
+    .copyrights {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (min-width: 1200px) {
+            display: block;
+        }
+        p {
+            display: flex;
+            align-items: center;
+        }
+        a {
+            margin-left: 5px;
+        }
+    }
+    .social {
+        margin-top: 20px;
+        @media screen and (min-width: 1200px) {
+            margin-top: 0;
+        }
+        svg {
+            width: 55px;
+            margin-left: 40px;
+            &:hover path {
+                fill: $color-001;
+                transition: 0.2s;
+            }
+        }
+    }
+    > img {
+        position: absolute;
+        bottom: 98%;
+        z-index: -1;
+        right: 7%;
+        width: 20%;
+    }
+}

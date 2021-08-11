@@ -1,0 +1,85 @@
+.contact {
+    margin: 0 0 200px 0;
+    padding-top: 200px;
+    .contact-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+    .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 30%;
+        margin-top: 50px;
+    }
+    p {
+        font-size: 2.125rem;
+        color: $color-001;
+    }
+    .diplome {
+        font-family: $secondary-font-italic;
+        font-size: 1.313rem;
+        color: $color-001;
+        text-align: center;
+    }
+    .social-wrapper {
+        display: flex;
+        svg {
+            width: 50px;
+            &:hover path {
+                fill: $color-001;
+            }
+        }
+    }
+    .social {
+        a:not(:nth-child(1)) {
+            margin-left: 20px;
+        }
+    }
+}
+
+button {
+    padding: 15px 50px;
+    background-color: $color-008;
+    color: $color-002;
+    border: none;
+    border-radius: 25px;
+    font-family: $primary-font;
+    font-size: 2.125rem;
+    transition: 0.2s;
+    z-index: 999;
+
+    &:hover {
+        background-color: $color-007;
+    }
+}
+
+#form {
+    display: none;
+    #arrow-form {
+        background-color: transparent;
+        margin: -40px 0 0 -80px;
+        padding: 0;
+    }
+    svg {
+        transform: rotate(90deg);
+        height: 55px;
+        width: 55px;
+        cursor: pointer;
+    }
+}
+.butterfly-form {
+    position: absolute;
+    top: 23%;
+    right: 11%;
+    transform: rotateY(198deg) rotateX(328deg);
+    transition: 1s;
+}
+.thanks {
+    display: none;
+    color: $color-005;
+    max-width: 80%;
+    text-align: center;
+}
