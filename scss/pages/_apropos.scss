@@ -5,11 +5,14 @@
         margin-bottom: 50px;
     }
     a {
-        font-size: 3.438rem;
+        font-size: 4rem;
         color: $color-001;
         font-family: $primary-font;
         display: flex;
         align-items: center;
+        @media screen and (min-width: 992px) {
+            font-size: 3.438rem;
+        }
     }
     .triangle {
         height: 0;
@@ -25,12 +28,19 @@
         padding-left: 120px;
         background: none;
         p {
-            max-width: 60%;
+            max-width: 100%;
             margin-bottom: 30px;
+            @media screen and (min-width: 992px) {
+                max-width: 60%;
+            }
         }
         li {
-            font-size: 1.313rem;
-            max-width: 60%;
+            font-size: 2rem;
+            max-width: 100%;
+            @media screen and (min-width: 992px) {
+                max-width: 60%;
+                font-size: 1.313rem;
+            }
         }
         strong {
             color: $color-001;

@@ -22,12 +22,30 @@
         .text-wrapper {
             max-width: 70%;
             margin: 50px 0;
+
             @media screen and (min-width: 992px) {
                 max-width: 60%;
             }
             @media screen and (min-width: 1500px) {
                 max-width: 70%;
                 margin-top: 0px;
+                padding-top: 50px;
+            }
+            .logo-wrapper {
+                width: 100%;
+                margin-top: 50px;
+                @media screen and (min-width: 992px) {
+                    width: 80%;
+                    margin: 50px auto 0 auto;
+                }
+                @media screen and (min-width: 1500px) {
+                    width: 20%;
+                }
+            }
+            img {
+                object-fit: none;
+                height: fit-content;
+                height: -moz-fit-content;
             }
         }
         .img-wrapper {

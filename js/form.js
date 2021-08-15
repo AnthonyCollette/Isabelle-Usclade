@@ -1,6 +1,7 @@
 $('#pop-form').click('#pop-form', () => {
     $('#pop-form').addClass('display-none')
     $('#form').addClass('display-block')
+    $('#form').addClass('animation-form')
     $('#form').removeClass('diplay-none')
     $('#pop-form').removeClass('display-block')
     $('#butterfly-form').css('top', '-1%')

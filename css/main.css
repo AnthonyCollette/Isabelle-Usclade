@@ -44,11 +44,17 @@ h1 {
   color: #493e5b;
   font-family: "Segoe UI Black";
   font-weight: 900;
-  font-size: 3.438rem;
+  font-size: 4rem;
   position: relative;
   width: -webkit-fit-content;
   width: fit-content;
   width: -moz-fit-content;
+}
+
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 3.438rem;
+  }
 }
 
 h1::before {
@@ -81,12 +87,18 @@ h4 {
   color: #799be8;
   font-family: "Segoe UI Black";
   font-weight: 900;
-  font-size: 2.125rem;
+  font-size: 2.5rem;
   position: relative;
   width: -webkit-fit-content;
   width: fit-content;
   width: -moz-fit-content;
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  h4 {
+    font-size: 2.125rem;
+  }
 }
 
 h4::before {
@@ -105,20 +117,38 @@ h4::before {
 h5 {
   color: #fff;
   font-family: "Segoe UI Black";
-  font-size: 1.313rem;
+  font-size: 2.2rem;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  h5 {
+    font-size: 1.313rem;
+  }
 }
 
 h6 {
   font-family: "Verveine Regular";
-  font-size: 3.438rem;
+  font-size: 5rem;
   color: #493e5b;
+}
+
+@media screen and (min-width: 992px) {
+  h6 {
+    font-size: 3.438rem;
+  }
 }
 
 p {
   color: #000;
   font-family: "Segoe UI Regular";
-  font-size: 1.313rem;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  p {
+    font-size: 1.313rem;
+  }
 }
 
 * {
@@ -383,7 +413,7 @@ strong {
 }
 
 .apropos a {
-  font-size: 3.438rem;
+  font-size: 4rem;
   color: #493e5b;
   font-family: "Verveine Regular";
   display: -webkit-box;
@@ -392,6 +422,12 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .apropos a {
+    font-size: 3.438rem;
+  }
 }
 
 .apropos .triangle {
@@ -412,13 +448,26 @@ strong {
 }
 
 .apropos .card p {
-  max-width: 60%;
+  max-width: 100%;
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 992px) {
+  .apropos .card p {
+    max-width: 60%;
+  }
+}
+
 .apropos .card li {
-  font-size: 1.313rem;
-  max-width: 60%;
+  font-size: 2rem;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .apropos .card li {
+    max-width: 60%;
+    font-size: 1.313rem;
+  }
 }
 
 .apropos .card strong {
@@ -482,7 +531,34 @@ strong {
   .quisuisje .wrapper .text-wrapper {
     max-width: 70%;
     margin-top: 0px;
+    padding-top: 50px;
   }
+}
+
+.quisuisje .wrapper .text-wrapper .logo-wrapper {
+  width: 100%;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .quisuisje .wrapper .text-wrapper .logo-wrapper {
+    width: 80%;
+    margin: 50px auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .quisuisje .wrapper .text-wrapper .logo-wrapper {
+    width: 20%;
+  }
+}
+
+.quisuisje .wrapper .text-wrapper img {
+  -o-object-fit: none;
+     object-fit: none;
+  height: -webkit-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
 }
 
 .quisuisje .wrapper .img-wrapper {
@@ -755,9 +831,20 @@ footer > img {
   position: relative;
   margin-left: 0;
   padding-left: 0;
+  min-height: 600px;
+}
+
+@media screen and (min-width: 1400px) {
+  .tarifs .container > ul {
+    min-height: -webkit-fit-content;
+    min-height: fit-content;
+    min-height: -moz-fit-content;
+  }
 }
 
 .tarifs .container > ul li {
+  -webkit-transition: 1s;
+  transition: 1s;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -795,19 +882,47 @@ footer > img {
 }
 
 .tarifs #list-5 {
-  left: 5%;
+  left: 20%;
+}
+
+@media screen and (min-width: 1400px) {
+  .tarifs #list-5 {
+    left: 5%;
+  }
 }
 
 .tarifs #list-6 {
-  left: 27%;
+  left: 50%;
+}
+
+@media screen and (min-width: 1400px) {
+  .tarifs #list-6 {
+    left: 24%;
+  }
 }
 
 .tarifs #list-7 {
-  left: 51%;
+  left: 20%;
+  top: 60%;
+}
+
+@media screen and (min-width: 1400px) {
+  .tarifs #list-7 {
+    left: 50%;
+    top: 0;
+  }
 }
 
 .tarifs #list-8 {
-  left: 73%;
+  left: 50%;
+  top: 60%;
+}
+
+@media screen and (min-width: 1400px) {
+  .tarifs #list-8 {
+    left: 73%;
+    top: 0;
+  }
 }
 
 .tarifs .details-tarifs {
@@ -815,9 +930,21 @@ footer > img {
   padding: 45px 25px;
   border-radius: 20px;
   max-width: 55%;
-  margin: -200px auto 100px auto;
   visibility: hidden;
   position: relative;
+  margin: -900px 0 100px 30%;
+}
+
+@media screen and (min-width: 1100px) {
+  .tarifs .details-tarifs {
+    margin: -900px 0 100px 40%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .tarifs .details-tarifs {
+    margin: -200px auto 100px auto;
+  }
 }
 
 .tarifs .details-tarifs i {
@@ -848,12 +975,18 @@ footer > img {
 }
 
 .seances {
-  padding: 30vh 0;
+  padding: 20vh 0;
   background-image: url("/images/bg-seances.png");
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: -140px;
   min-height: 1000px;
+}
+
+@media screen and (min-width: 992px) {
+  .seances {
+    padding: 30vh 0;
+  }
 }
 
 .seances .img-wrapper {
@@ -882,13 +1015,26 @@ footer > img {
 
 .seances .text-wrapper p {
   font-family: "Segoe UI Black";
-  font-size: 1.313rem;
+  font-size: 2rem;
   color: #799be8;
+}
+
+@media screen and (min-width: 992px) {
+  .seances .text-wrapper p {
+    font-size: 1.313rem;
+  }
 }
 
 .seances .container > ul {
   margin-top: 90px;
   position: relative;
+  min-height: 1200px;
+}
+
+@media screen and (min-width: 992px) {
+  .seances .container > ul {
+    min-height: 600px;
+  }
 }
 
 .seances .container > ul li {
@@ -906,6 +1052,19 @@ footer > img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.seances .container .list-wrapper {
+  position: relative;
+}
+
+.seances .container article {
+  -webkit-transition: 1s;
+  transition: 1s;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .seances .container #group ul {
@@ -917,10 +1076,29 @@ footer > img {
   background-color: #a09cc2;
   padding: 45px 25px;
   border-radius: 20px;
-  max-width: 55%;
-  margin: 200px auto;
+  max-width: 100%;
+  margin: -930px auto 100px auto;
   visibility: hidden;
   position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .seances .container .details-seances {
+    max-width: 55%;
+    margin: -520px 0 100px 40%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .seances .container .details-seances {
+    margin: -520px 0 100px 30%;
+  }
+}
+
+@media screen and (min-width: 1856px) {
+  .seances .container .details-seances {
+    margin: -520px auto 100px auto;
+  }
 }
 
 .seances .container .details-seances i {
@@ -942,7 +1120,13 @@ footer > img {
 
 .seances .container .details-seances li {
   color: #fff;
-  font-size: 1.313rem;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .seances .container .details-seances li {
+    font-size: 1.313rem;
+  }
 }
 
 .seances .container .details-seances .adapt {
@@ -954,49 +1138,117 @@ footer > img {
 }
 
 #list-1 {
-  left: 7%;
+  left: 25%;
+  top: 0;
+}
+
+@media screen and (min-width: 992px) {
+  #list-1 {
+    left: 10%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #list-1 {
+    left: 20%;
+  }
+}
+
+@media screen and (min-width: 1856px) {
+  #list-1 {
+    left: 7%;
+  }
 }
 
 #list-2 {
-  left: 30%;
+  left: 25%;
+  top: 25%;
+}
+
+@media screen and (min-width: 992px) {
+  #list-2 {
+    left: 60%;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #list-2 {
+    left: 50%;
+  }
+}
+
+@media screen and (min-width: 1856px) {
+  #list-2 {
+    left: 30%;
+  }
 }
 
 #list-3 {
-  left: 50%;
+  left: 25%;
+  top: 50%;
+}
+
+@media screen and (min-width: 992px) {
+  #list-3 {
+    top: 50%;
+    left: 10%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #list-3 {
+    left: 20%;
+  }
+}
+
+@media screen and (min-width: 1856px) {
+  #list-3 {
+    top: 0;
+    left: 50%;
+  }
 }
 
 #list-4 {
-  left: 73%;
+  left: 35%;
+  top: 75%;
+}
+
+@media screen and (min-width: 992px) {
+  #list-4 {
+    top: 50%;
+    left: 63%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #list-4 {
+    left: 53%;
+  }
+}
+
+@media screen and (min-width: 1856px) {
+  #list-4 {
+    top: 0;
+    left: 73%;
+  }
 }
 
 .toleft {
   left: 0 !important;
-  -webkit-transition: 1s;
-  transition: 1s;
+  top: 0 !important;
 }
 
-.to-origin-1 {
-  left: 7% !important;
-  -webkit-transition: 1s;
-  transition: 1s;
+.others {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.to-origin-2 {
-  left: 30% !important;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.to-origin-3 {
-  left: 50% !important;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.to-origin-4 {
-  left: 73% !important;
-  -webkit-transition: 1s;
-  transition: 1s;
+.apparition {
+  opacity: 100%;
+  visibility: visible !important;
 }
 
 form {
@@ -1072,12 +1324,25 @@ form .btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .contact .contact-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .contact .text-wrapper {
@@ -1091,8 +1356,14 @@ form .btn-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 30%;
+  max-width: 80%;
   margin-top: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .contact .text-wrapper {
+    max-width: 30%;
+  }
 }
 
 .contact p {
@@ -1102,15 +1373,28 @@ form .btn-wrapper {
 
 .contact .diplome {
   font-family: "Segoe UI Italic";
-  font-size: 1.313rem;
+  font-size: 1.6rem;
   color: #493e5b;
   text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .contact .diplome {
+    font-size: 1.313rem;
+  }
 }
 
 .contact .social-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .contact .social-wrapper {
+    margin-bottom: 0;
+  }
 }
 
 .contact .social-wrapper svg {
@@ -1144,6 +1428,10 @@ button:hover, form .btn-send:hover {
 
 #form {
   display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 #form #arrow-form {
@@ -1160,14 +1448,28 @@ button:hover, form .btn-send:hover {
   cursor: pointer;
 }
 
+.form-width {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .butterfly-form {
   position: absolute;
-  top: 23%;
+  top: 100%;
   right: 11%;
   -webkit-transform: rotateY(198deg) rotateX(328deg);
           transform: rotateY(198deg) rotateX(328deg);
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+@media screen and (min-width: 992px) {
+  .butterfly-form {
+    top: 23%;
+    right: 11%;
+  }
 }
 
 .thanks {
@@ -1249,4 +1551,69 @@ button:hover, form .btn-send:hover {
           animation: disparition 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes form {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+  1% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+}
+
+@keyframes form {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+  1% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+}
+
+.animation-form {
+  -webkit-animation: form 1s;
+          animation: form 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mentions {
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+
+.mentions h2 {
+  color: #493e5b;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 50px 0 20px 0;
+}
+
+.mentions .info {
+  font-weight: 600;
 }

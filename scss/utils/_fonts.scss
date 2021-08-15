@@ -50,10 +50,14 @@ h1 {
     color: $color-001;
     font-family: $secondary-font-black;
     font-weight: 900;
-    font-size: 3.438rem;
+
+    font-size: 4rem;
     position: relative;
     width: fit-content;
     width: -moz-fit-content;
+    @media screen and (min-width: 992px) {
+        font-size: 3.438rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -84,11 +88,14 @@ h4 {
     color: $color-005;
     font-family: $secondary-font-black;
     font-weight: 900;
-    font-size: 2.125rem;
+    font-size: 2.5rem;
     position: relative;
     width: fit-content;
     width: -moz-fit-content;
     margin-bottom: 0;
+    @media screen and (min-width: 992px) {
+        font-size: 2.125rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -105,18 +112,27 @@ h4 {
 h5 {
     color: $color-002;
     font-family: $secondary-font-black;
-    font-size: 1.313rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
+    @media screen and (min-width: 992px) {
+        font-size: 1.313rem;
+    }
 }
 
 h6 {
     font-family: $primary-font;
-    font-size: 3.438rem;
+    font-size: 5rem;
     color: $color-001;
+    @media screen and (min-width: 992px) {
+        font-size: 3.438rem;
+    }
 }
 
 p {
     color: $color-003;
     font-family: $secondary-font-regular;
-    font-size: 1.313rem;
+    font-size: 2rem;
+    @media screen and (min-width: 992px) {
+        font-size: 1.313rem;
+    }
 }

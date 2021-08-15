@@ -37,3 +37,23 @@
     animation: disparition 1s;
     animation-fill-mode: forwards;
 }
+
+@keyframes form {
+    0% {
+        transform: scale(0);
+        transform-origin: top left;
+    }
+    1% {
+        transform: scale(0);
+        transform-origin: top left;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: top left;
+    }
+}
+
+.animation-form {
+    animation: form 1s;
+    animation-fill-mode: forwards;
+}

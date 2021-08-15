@@ -1,10 +1,13 @@
 .seances {
-    padding: 30vh 0;
+    padding: 20vh 0;
     background-image: url('/images/bg-seances.png');
     background-repeat: no-repeat;
     background-position: right;
     background-position-y: -140px;
     min-height: 1000px;
+    @media screen and (min-width: 992px) {
+        padding: 30vh 0;
+    }
 
     .img-wrapper {
         width: 200px;
@@ -22,14 +25,21 @@
         align-items: center;
         p {
             font-family: $secondary-font-black;
-            font-size: 1.313rem;
+            font-size: 2rem;
             color: $color-005;
+            @media screen and (min-width: 992px) {
+                font-size: 1.313rem;
+            }
         }
     }
     .container {
         > ul {
             margin-top: 90px;
             position: relative;
+            min-height: 1200px;
+            @media screen and (min-width: 992px) {
+                min-height: 600px;
+            }
             li {
                 position: absolute;
                 list-style: none;
@@ -38,7 +48,16 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                transition: 1s;
             }
+        }
+        .list-wrapper {
+            position: relative;
+        }
+        article {
+            transition: 1s;
+            visibility: hidden;
+            opacity: 0;
         }
         #group ul {
             margin-left: 0;
@@ -48,10 +67,20 @@
             background-color: $color-010;
             padding: 45px 25px;
             border-radius: 20px;
-            max-width: 55%;
-            margin: 200px auto;
+            max-width: 100%;
+            margin: -930px auto 100px auto;
             visibility: hidden;
             position: relative;
+            @media screen and (min-width: 992px) {
+                max-width: 55%;
+                margin: -520px 0 100px 40%;
+            }
+            @media screen and (min-width: 1400px) {
+                margin: -520px 0 100px 30%;
+            }
+            @media screen and (min-width: 1856px) {
+                margin: -520px auto 100px auto;
+            }
             i {
                 color: $color-002;
                 position: absolute;
@@ -69,7 +98,10 @@
 
             li {
                 color: $color-002;
-                font-size: 1.313rem;
+                font-size: 2rem;
+                @media screen and (min-width: 992px) {
+                    font-size: 1.313rem;
+                }
             }
             .adapt {
                 color: $color-011;
@@ -83,38 +115,79 @@
 }
 
 #list-1 {
-    left: 7%;
+    left: 25%;
+    top: 0;
+    @media screen and (min-width: 992px) {
+        left: 10%;
+    }
+
+    @media screen and (min-width: 1400px) {
+        left: 20%;
+    }
+    @media screen and (min-width: 1856px) {
+        left: 7%;
+    }
 }
 
 #list-2 {
-    left: 30%;
+    left: 25%;
+    top: 25%;
+    @media screen and (min-width: 992px) {
+        left: 60%;
+        top: 0;
+    }
+    @media screen and (min-width: 1400px) {
+        left: 50%;
+    }
+    @media screen and (min-width: 1856px) {
+        left: 30%;
+    }
 }
 
 #list-3 {
-    left: 50%;
+    left: 25%;
+    top: 50%;
+    @media screen and (min-width: 992px) {
+        top: 50%;
+        left: 10%;
+    }
+    @media screen and (min-width: 1400px) {
+        left: 20%;
+    }
+    @media screen and (min-width: 1856px) {
+        top: 0;
+        left: 50%;
+    }
 }
 
 #list-4 {
-    left: 73%;
+    left: 35%;
+    top: 75%;
+    @media screen and (min-width: 992px) {
+        top: 50%;
+        left: 63%;
+    }
+    @media screen and (min-width: 1400px) {
+        left: 53%;
+    }
+    @media screen and (min-width: 1856px) {
+        top: 0;
+        left: 73%;
+    }
 }
 
 .toleft {
     left: 0 !important;
-    transition: 1s;
+    top: 0 !important;
 }
-.to-origin-1 {
-    left: 7% !important;
-    transition: 1s;
+
+.others {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
 }
-.to-origin-2 {
-    left: 30% !important;
-    transition: 1s;
-}
-.to-origin-3 {
-    left: 50% !important;
-    transition: 1s;
-}
-.to-origin-4 {
-    left: 73% !important;
-    transition: 1s;
+
+.apparition {
+    opacity: 100%;
+    visibility: visible !important;
 }
