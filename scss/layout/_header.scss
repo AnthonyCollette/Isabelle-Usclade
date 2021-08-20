@@ -39,17 +39,23 @@
     justify-content: space-between;
     background-color: $color-001;
     color: $color-002;
-    padding: 10px 10%;
+    padding: 10px 0 10px 10%;
     width: 100%;
     z-index: 999;
     position: fixed;
 
-    @media screen and (min-width: 688px) {
-        padding: 10px 140px;
+    @media screen and (min-width: 576px) {
+        padding-right: 5%;
+    }
+    @media screen and (min-width: 992px) {
+        padding-right: 10%;
     }
     .navbar-brand {
-        font-size: 3.438rem;
+        font-size: 2.2rem;
         font-family: $primary-font;
+        @media screen and (min-width: 992px) {
+            font-size: 3.438rem;
+        }
     }
     a {
         color: $color-002;
@@ -90,17 +96,28 @@
         &:focus {
             outline: none;
         }
-        svg path {
-            fill: $color-002;
+        svg {
+            height: 20px;
+            @media screen and (min-width: 992px) {
+                height: 35px;
+            }
+            path {
+                fill: $color-002;
+            }
         }
     }
 }
 
 .header {
     position: relative;
+    overflow: hidden;
     > img {
-        width: 100%;
-        margin-top: 110px;
+        width: 130%;
+        margin-top: 82px;
+        @media screen and (min-width: 992px) {
+            width: 100%;
+            margin-top: 110px;
+        }
         @media screen and (min-width: 1400px) {
             margin-top: -112px;
         }
@@ -114,7 +131,11 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 25vh 0 0 0;
+        padding: 25% 0 0 0;
+        text-align: center;
+        @media screen and (min-width: 992px) {
+            padding: 25vh 0 0 0;
+        }
         svg {
             transform: rotate(90deg);
             border: 15px solid white;
@@ -135,6 +156,7 @@
         color: $color-002;
         max-width: 50%;
         text-align: center;
+        font-size: 1.5rem;
         @media screen and (min-width: 1400px) {
             max-width: 100%;
         }
