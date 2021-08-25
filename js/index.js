@@ -25,12 +25,19 @@ div2.addEventListener('click', () => {
     }
 })
 
-$('#apropos-button').click((event) => {
-    event.preventDefault()
-    $('html, body').animate(
-        {
-            scrollTop: $('#apropos').offset().top,
-        },
-        1500
-    )
+$(window).scroll(function () {
+    var top_of_element = $('#apropos').offset().top
+    var bottom_of_element = $('#apropos').offset().top + $('#apropos').outerHeight()
+    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight()
+    var top_of_screen = $(window).scrollTop()
+
+    if (bottom_of_screen > top_of_element && top_of_screen < bottom_of_element) {
+        // the element is visible, do something
+        $('#home-nav').removeClass('active')
+        $('#apropos-nav').addClass('active')
+    } else {
+        // the element is not visible, do something else
+        $('#apropos-nav').removeClass('active')
+        $('#home-nav').addClass('active')
+    }
 })

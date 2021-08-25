@@ -1,11 +1,12 @@
 .apropos {
     padding: 120px 0;
     margin-bottom: 200px;
-    h3 {
+
+    h1 {
         margin-bottom: 50px;
     }
     a {
-        font-size: 4rem;
+        font-size: 3rem;
         color: $color-001;
         font-family: $primary-font;
         display: flex;
@@ -25,8 +26,11 @@
     }
     .card {
         border: none;
-        padding-left: 120px;
+        padding-left: 0;
         background: none;
+        @media screen and (min-width: 992px) {
+            padding-left: 120px;
+        }
         p {
             max-width: 100%;
             margin-bottom: 30px;
@@ -35,7 +39,7 @@
             }
         }
         li {
-            font-size: 2rem;
+            font-size: 1.2rem;
             max-width: 100%;
             @media screen and (min-width: 992px) {
                 max-width: 60%;

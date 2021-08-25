@@ -31,10 +31,16 @@ footer {
     }
     .butterfly-footer-3 {
         position: absolute;
-        bottom: 0%;
+        bottom: -30%;
         z-index: 998;
         left: 105%;
         transform: rotate(10deg);
+        @media screen and (min-width: 339px) {
+            left: 105%;
+        }
+        @media screen and (min-width: 992px) {
+            bottom: 0;
+        }
         @media screen and (min-width: 1200px) {
             left: 78%;
             bottom: 50%;
@@ -46,13 +52,17 @@ footer {
 
     .mentions-wrapper {
         position: relative;
+        text-align: center;
 
         a {
             font-family: $secondary-font-bold;
-            font-size: 2.125rem;
+            font-size: 1.6rem;
             margin: 20px 0 40px 0;
             z-index: 999;
             position: relative;
+            @media screen and (min-width: 992px) {
+                font-size: 2.125rem;
+            }
             @media screen and (min-width: 1200px) {
                 margin: 0;
             }
@@ -83,6 +93,12 @@ footer {
         p {
             display: flex;
             align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            @media screen and (min-width: 428px) {
+                flex-direction: row;
+            }
         }
         a {
             margin-left: 5px;
@@ -105,7 +121,7 @@ footer {
     > img {
         position: absolute;
         bottom: 98%;
-        z-index: -1;
+        z-index: 1;
         right: 7%;
         width: 20%;
     }

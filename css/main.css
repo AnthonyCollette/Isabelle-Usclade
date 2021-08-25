@@ -44,7 +44,7 @@ h1 {
   color: #493e5b;
   font-family: "Segoe UI Black";
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 2.8rem;
   position: relative;
   width: -webkit-fit-content;
   width: fit-content;
@@ -161,7 +161,7 @@ h6 {
 p {
   color: #000;
   font-family: "Segoe UI Regular";
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -274,18 +274,7 @@ strong {
   width: 100%;
   z-index: 999;
   position: fixed;
-}
-
-@media screen and (min-width: 576px) {
-  .navbar {
-    padding-right: 5%;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .navbar {
-    padding-right: 10%;
-  }
+  padding-right: 5%;
 }
 
 .navbar .navbar-brand {
@@ -313,6 +302,7 @@ strong {
   position: relative;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  font-size: 20px;
 }
 
 .navbar .nav-item a::before {
@@ -335,6 +325,15 @@ strong {
 }
 
 .navbar .nav-item a:hover::before {
+  width: 80%;
+}
+
+.navbar .nav-item.active a {
+  position: relative;
+  color: #493e5b;
+}
+
+.navbar .nav-item.active a::before {
   width: 80%;
 }
 
@@ -367,15 +366,42 @@ strong {
 .header {
   position: relative;
   overflow: hidden;
+  padding-bottom: 300px;
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    padding-bottom: 0;
+  }
+}
+
+.header h1 {
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .header h1 {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .header > img {
   width: 130%;
   margin-top: 82px;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 @media screen and (min-width: 992px) {
   .header > img {
+    -webkit-transform: none;
+            transform: none;
     width: 100%;
     margin-top: 110px;
   }
@@ -416,10 +442,20 @@ strong {
 .header .filter svg {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  border: 15px solid white;
+  border: 10px solid white;
   border-radius: 80px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  height: 80px;
+  width: 80px;
+}
+
+@media screen and (min-width: 992px) {
+  .header .filter svg {
+    border: 15px solid white;
+    height: 136px;
+    width: 136px;
+  }
 }
 
 .header .filter svg:hover {
@@ -438,9 +474,16 @@ strong {
 
 .header p {
   color: #fff;
-  max-width: 50%;
+  max-width: 80%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 992px) {
+  .header p {
+    max-width: 50%;
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -451,11 +494,18 @@ strong {
 
 .header q {
   font-family: "Verveine Regular";
-  font-size: 3.438rem;
-  color: #493e5b;
-  margin: -150px 2% 0 0;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  font-size: 3rem;
+  color: #fff;
+  margin: -250px 0 0 0;
+}
+
+@media screen and (min-width: 992px) {
+  .header q {
+    color: #493e5b;
+    margin: -150px 2% 0 0;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -469,12 +519,12 @@ strong {
   margin-bottom: 200px;
 }
 
-.apropos h3 {
+.apropos h1 {
   margin-bottom: 50px;
 }
 
 .apropos a {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #493e5b;
   font-family: "Verveine Regular";
   display: -webkit-box;
@@ -504,8 +554,14 @@ strong {
 
 .apropos .card {
   border: none;
-  padding-left: 120px;
+  padding-left: 0;
   background: none;
+}
+
+@media screen and (min-width: 992px) {
+  .apropos .card {
+    padding-left: 120px;
+  }
 }
 
 .apropos .card p {
@@ -520,7 +576,7 @@ strong {
 }
 
 .apropos .card li {
-  font-size: 2rem;
+  font-size: 1.2rem;
   max-width: 100%;
 }
 
@@ -537,6 +593,7 @@ strong {
 
 .quisuisje {
   position: relative;
+  min-height: 85vh;
 }
 
 .quisuisje > img {
@@ -633,6 +690,13 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .quisuisje .wrapper .img-wrapper {
+    margin-top: 0;
+  }
 }
 
 .quisuisje .wrapper .img-overflow {
@@ -708,11 +772,23 @@ footer .butterfly-footer-2 svg path {
 
 footer .butterfly-footer-3 {
   position: absolute;
-  bottom: 0%;
+  bottom: -30%;
   z-index: 998;
   left: 105%;
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
+}
+
+@media screen and (min-width: 339px) {
+  footer .butterfly-footer-3 {
+    left: 105%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer .butterfly-footer-3 {
+    bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -728,14 +804,21 @@ footer .butterfly-footer-3 svg path {
 
 footer .mentions-wrapper {
   position: relative;
+  text-align: center;
 }
 
 footer .mentions-wrapper a {
   font-family: "Segoe UI Bold";
-  font-size: 2.125rem;
+  font-size: 1.6rem;
   margin: 20px 0 40px 0;
   z-index: 999;
   position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  footer .mentions-wrapper a {
+    font-size: 2.125rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -789,6 +872,23 @@ footer .copyrights p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 428px) {
+  footer .copyrights p {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 footer .copyrights a {
@@ -819,7 +919,7 @@ footer .social svg:hover path {
 footer > img {
   position: absolute;
   bottom: 98%;
-  z-index: -1;
+  z-index: 1;
   right: 7%;
   width: 20%;
 }
@@ -1090,6 +1190,7 @@ footer > img {
   margin-top: 90px;
   position: relative;
   min-height: 1200px;
+  z-index: 998;
 }
 
 @media screen and (min-width: 992px) {
@@ -1102,7 +1203,6 @@ footer > img {
   position: absolute;
   list-style: none;
   cursor: pointer;
-  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1126,6 +1226,7 @@ footer > img {
   transition: 1s;
   visibility: hidden;
   opacity: 0;
+  z-index: 999;
 }
 
 .seances .container #group ul {
