@@ -1,12 +1,16 @@
 .apropos {
-    padding: 120px 0;
+    padding: 0 0 120px 0;
+    margin-top: 50px;
     margin-bottom: 200px;
+    @media screen and (min-width: 992px) {
+        padding: 120px 0;
+    }
 
     h1 {
         margin-bottom: 50px;
     }
     a {
-        font-size: 3rem;
+        font-size: 2rem;
         color: $color-001;
         font-family: $primary-font;
         display: flex;
@@ -18,11 +22,16 @@
     .triangle {
         height: 0;
         width: 0;
-        border-top: 25px solid transparent;
-        border-bottom: 25px solid transparent;
-        border-left: 43px solid $color-006;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 30px solid $color-006;
         margin-right: 20px;
         transition: 0.4s;
+        @media screen and (min-width: 992px) {
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-left: 43px solid $color-006;
+        }
     }
     .card {
         border: none;

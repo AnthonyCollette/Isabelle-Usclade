@@ -70,26 +70,6 @@ h1::before {
           transform: skew(320deg) rotate(356deg);
 }
 
-header h1 {
-  color: #fff;
-  font-family: "Verveine Regular";
-  font-size: 3.8rem;
-  font-weight: 300;
-  line-height: 6rem;
-}
-
-@media screen and (min-width: 576px) {
-  header h1 {
-    font-size: 7rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  header h1 {
-    font-size: 9rem;
-  }
-}
-
 h2 {
   color: #fff;
   font-family: "Segoe UI Regular";
@@ -136,7 +116,7 @@ h4::before {
 h5 {
   color: #fff;
   font-family: "Segoe UI Black";
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
@@ -150,11 +130,13 @@ h6 {
   font-family: "Verveine Regular";
   font-size: 5rem;
   color: #493e5b;
+  line-height: 1;
 }
 
 @media screen and (min-width: 992px) {
   h6 {
     font-size: 3.438rem;
+    line-height: 1.2;
   }
 }
 
@@ -172,6 +154,9 @@ p {
 
 * {
   margin: 0;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 html {
@@ -207,6 +192,12 @@ strong {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
+}
+
+@media screen and (max-width: 400px) {
+  .navbar-toggler {
+    padding: 0;
+  }
 }
 
 @media (min-width: 1536px) {
@@ -364,6 +355,7 @@ strong {
 }
 
 .header {
+  z-index: 999;
   position: relative;
   overflow: hidden;
   padding-bottom: 300px;
@@ -372,22 +364,6 @@ strong {
 @media screen and (min-width: 992px) {
   .header {
     padding-bottom: 0;
-  }
-}
-
-.header h1 {
-  margin-top: 50px;
-}
-
-@media screen and (min-width: 992px) {
-  .header h1 {
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .header h2 {
-    font-size: 1.8rem;
   }
 }
 
@@ -435,6 +411,12 @@ strong {
 
 @media screen and (min-width: 992px) {
   .header .filter {
+    padding: 18vh 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .header .filter {
     padding: 25vh 0 0 0;
   }
 }
@@ -472,11 +454,43 @@ strong {
   }
 }
 
+.header h1 {
+  color: #fff;
+  font-family: "Verveine Regular";
+  font-size: 3.8rem;
+  font-weight: 300;
+  line-height: 6rem;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .header h1 {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header h1 {
+    font-size: 9rem;
+    margin-top: 0;
+  }
+}
+
+.header h2 {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  .header h2 {
+    font-size: 2rem;
+  }
+}
+
 .header p {
   color: #fff;
   max-width: 80%;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -494,9 +508,15 @@ strong {
 
 .header q {
   font-family: "Verveine Regular";
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   margin: -250px 0 0 0;
+}
+
+@media screen and (min-width: 576px) {
+  .header q {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -515,8 +535,15 @@ strong {
 }
 
 .apropos {
-  padding: 120px 0;
+  padding: 0 0 120px 0;
+  margin-top: 50px;
   margin-bottom: 200px;
+}
+
+@media screen and (min-width: 992px) {
+  .apropos {
+    padding: 120px 0;
+  }
 }
 
 .apropos h1 {
@@ -524,7 +551,7 @@ strong {
 }
 
 .apropos a {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #493e5b;
   font-family: "Verveine Regular";
   display: -webkit-box;
@@ -544,12 +571,20 @@ strong {
 .apropos .triangle {
   height: 0;
   width: 0;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-  border-left: 43px solid #dcb36a;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 30px solid #dcb36a;
   margin-right: 20px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+@media screen and (min-width: 992px) {
+  .apropos .triangle {
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 43px solid #dcb36a;
+  }
 }
 
 .apropos .card {
@@ -752,6 +787,11 @@ footer .butterfly-footer-1 {
   left: 22%;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  z-index: -1;
+}
+
+footer .butterfly-footer-1 svg {
+  width: 80%;
 }
 
 footer .butterfly-footer-1 svg path {
@@ -764,6 +804,11 @@ footer .butterfly-footer-2 {
   left: 30%;
   -webkit-transform: rotateY(180deg) rotate(30deg);
           transform: rotateY(180deg) rotate(30deg);
+  z-index: -1;
+}
+
+footer .butterfly-footer-2 svg {
+  width: 60%;
 }
 
 footer .butterfly-footer-2 svg path {
@@ -918,7 +963,7 @@ footer .social svg:hover path {
 
 footer > img {
   position: absolute;
-  bottom: 98%;
+  bottom: 99%;
   z-index: 1;
   right: 7%;
   width: 20%;
@@ -927,7 +972,15 @@ footer > img {
 .tarifs {
   position: relative;
   padding-bottom: 300px;
-  min-height: 800px;
+  min-height: 1310px;
+  padding: 100px 2%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 576px) {
+  .tarifs {
+    padding: 100px;
+  }
 }
 
 .tarifs > img {
@@ -935,10 +988,17 @@ footer > img {
   right: 0;
   bottom: 0;
   top: -100px;
+  z-index: -1;
 }
 
 .tarifs .container {
-  padding: 150px 0 0 0;
+  padding: 50px 0 0 0;
+}
+
+@media screen and (min-width: 576px) {
+  .tarifs .container {
+    padding: 150px 0 0 0;
+  }
 }
 
 .tarifs .container > a {
@@ -947,20 +1007,38 @@ footer > img {
   text-align: center;
 }
 
-.tarifs .container .estimation {
-  max-width: 63%;
+@media screen and (min-width: 992px) {
+  .tarifs .container .estimation {
+    max-width: 63%;
+  }
 }
 
 .tarifs .tarifs-para {
-  font-size: 2.125rem;
+  font-size: 1.5rem;
   color: #a09cc2;
-  max-width: 60%;
   margin-top: 50px;
 }
 
+@media screen and (min-width: 576px) {
+  .tarifs .tarifs-para {
+    font-size: 2.125rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tarifs .tarifs-para {
+    max-width: 60%;
+  }
+}
+
 .tarifs h4 {
-  max-width: 60%;
   text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .tarifs h4 {
+    max-width: 60%;
+  }
 }
 
 .tarifs h4::before {
@@ -976,6 +1054,12 @@ footer > img {
           transform: skew(320deg) rotate(356deg);
 }
 
+@media screen and (max-width: 576px) {
+  .tarifs h5 {
+    font-size: 1.2rem;
+  }
+}
+
 .tarifs .img-wrapper {
   width: 200px;
   height: 200px;
@@ -987,12 +1071,24 @@ footer > img {
 
 .tarifs .container > ul {
   list-style: none;
-  margin-bottom: 400px;
   margin-top: 100px;
   position: relative;
   margin-left: 0;
   padding-left: 0;
-  min-height: 600px;
+  min-height: 1500px;
+}
+
+@media screen and (min-width: 576px) {
+  .tarifs .container > ul {
+    min-height: 1200px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tarifs .container > ul {
+    min-height: 600px;
+    margin-bottom: 400px;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -1043,7 +1139,19 @@ footer > img {
 }
 
 .tarifs #list-5 {
-  left: 20%;
+  left: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .tarifs #list-5 {
+    left: 20%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tarifs #list-5 {
+    left: 0;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -1053,7 +1161,22 @@ footer > img {
 }
 
 .tarifs #list-6 {
-  left: 50%;
+  left: 0;
+  top: 20%;
+}
+
+@media screen and (min-width: 576px) {
+  .tarifs #list-6 {
+    left: 11%;
+    top: 25%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tarifs #list-6 {
+    left: 50%;
+    top: 0;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -1063,8 +1186,22 @@ footer > img {
 }
 
 .tarifs #list-7 {
-  left: 20%;
-  top: 60%;
+  left: 0;
+  top: 45%;
+}
+
+@media screen and (min-width: 576px) {
+  .tarifs #list-7 {
+    left: 16%;
+    top: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tarifs #list-7 {
+    left: 0;
+    top: 60%;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -1075,8 +1212,22 @@ footer > img {
 }
 
 .tarifs #list-8 {
-  left: 50%;
-  top: 60%;
+  left: 0;
+  top: 70%;
+}
+
+@media screen and (min-width: 576px) {
+  .tarifs #list-8 {
+    left: 15%;
+    top: 75%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tarifs #list-8 {
+    left: 50%;
+    top: 60%;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -1090,10 +1241,22 @@ footer > img {
   background-color: #a09cc2;
   padding: 45px 25px;
   border-radius: 20px;
-  max-width: 55%;
   visibility: hidden;
   position: relative;
-  margin: -900px 0 100px 30%;
+  margin: -1180px 0 100px 0;
+}
+
+@media screen and (min-width: 576px) {
+  .tarifs .details-tarifs {
+    margin: -900px 0 100px 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tarifs .details-tarifs {
+    margin: -690px 0 100px 25%;
+    max-width: 55%;
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -1104,7 +1267,7 @@ footer > img {
 
 @media screen and (min-width: 1400px) {
   .tarifs .details-tarifs {
-    margin: -200px auto 100px auto;
+    margin: -200px auto 100px 30%;
   }
 }
 
@@ -1118,6 +1281,13 @@ footer > img {
 
 .tarifs .details-tarifs p {
   color: #fff;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 576px) {
+  .tarifs .details-tarifs p {
+    font-size: 1rem;
+  }
 }
 
 .tarifs .details-tarifs ul {
@@ -1226,7 +1396,7 @@ footer > img {
   transition: 1s;
   visibility: hidden;
   opacity: 0;
-  z-index: 999;
+  z-index: 998;
 }
 
 .seances .container #group ul {
@@ -1459,18 +1629,40 @@ form .form-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-form .form-wrapper input {
-  width: 49%;
+@media screen and (min-width: 576px) {
+  form .form-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  form .form-wrapper input {
+    max-width: 49%;
+  }
 }
 
 form .btn-send {
-  width: 50%;
+  padding: 5px 10px;
   margin-right: 0;
+}
+
+@media screen and (min-width: 576px) {
+  form .btn-send {
+    width: 50%;
+    padding: 15px 50px;
+  }
 }
 
 form .btn-wrapper {
@@ -1529,13 +1721,20 @@ form .btn-wrapper {
 }
 
 .contact p {
-  font-size: 2.125rem;
+  font-size: 1.8rem;
   color: #493e5b;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .contact p {
+    font-size: 2.125rem;
+  }
 }
 
 .contact .diplome {
   font-family: "Segoe UI Italic";
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: #493e5b;
   text-align: center;
 }
@@ -1588,6 +1787,12 @@ button:hover, form .btn-send:hover {
   background-color: #dd919e;
 }
 
+@media screen and (max-width: 576px) {
+  #pop-form {
+    font-size: 1.8rem;
+  }
+}
+
 #form {
   display: none;
   -webkit-transform: scale(0);
@@ -1598,8 +1803,14 @@ button:hover, form .btn-send:hover {
 
 #form #arrow-form {
   background-color: transparent;
-  margin: -40px 0 0 -80px;
+  margin: 0 0 20px 0;
   padding: 0;
+}
+
+@media screen and (min-width: 576px) {
+  #form #arrow-form {
+    margin: -40px 0 0 -80px;
+  }
 }
 
 #form svg {

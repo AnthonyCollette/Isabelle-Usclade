@@ -2,6 +2,12 @@
     flex-grow: 0;
 }
 
+.navbar-toggler {
+    @media screen and (max-width: 400px) {
+        padding: 0;
+    }
+}
+
 @media (min-width: 1536px) {
     .navbar-expand-custom {
         flex-direction: row;
@@ -114,22 +120,12 @@
 }
 
 .header {
+    z-index: 999;
     position: relative;
     overflow: hidden;
     padding-bottom: 300px;
     @media screen and (min-width: 992px) {
         padding-bottom: 0;
-    }
-    h1 {
-        margin-top: 50px;
-        @media screen and (min-width: 992px) {
-            margin-top: 0;
-        }
-    }
-    h2 {
-        @media screen and (max-width: 992px) {
-            font-size: 1.8rem;
-        }
     }
     > img {
         width: 130%;
@@ -156,6 +152,9 @@
         padding: 25% 0 0 0;
         text-align: center;
         @media screen and (min-width: 992px) {
+            padding: 18vh 0 0 0;
+        }
+        @media screen and (min-width: 1100px) {
             padding: 25vh 0 0 0;
         }
         svg {
@@ -181,11 +180,33 @@
             }
         }
     }
+
+    h1 {
+        color: $color-002;
+        font-family: $primary-font;
+        font-size: 3.8rem;
+        font-weight: 300;
+        line-height: 6rem;
+        margin-top: 0;
+        @media screen and (min-width: 576px) {
+            font-size: 7rem;
+        }
+        @media screen and (min-width: 992px) {
+            font-size: 9rem;
+            margin-top: 0;
+        }
+    }
+    h2 {
+        font-size: 1.5rem;
+        @media screen and (min-width: 576px) {
+            font-size: 2rem;
+        }
+    }
     p {
         color: $color-002;
         max-width: 80%;
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1rem;
         @media screen and (min-width: 992px) {
             max-width: 50%;
             font-size: 1.5rem;
@@ -194,11 +215,15 @@
             max-width: 100%;
         }
     }
+
     q {
         font-family: $primary-font;
-        font-size: 3rem;
+        font-size: 2rem;
         color: $color-002;
         margin: -250px 0 0 0;
+        @media screen and (min-width: 576px) {
+            font-size: 3rem;
+        }
         @media screen and (min-width: 992px) {
             color: $color-001;
             margin: -150px 2% 0 0;

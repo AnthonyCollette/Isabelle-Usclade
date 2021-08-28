@@ -1,15 +1,24 @@
 .tarifs {
     position: relative;
     padding-bottom: 300px;
-    min-height: 800px;
+    min-height: 1310px;
+    padding: 100px 2%;
+    overflow: hidden;
+    @media screen and (min-width: 576px) {
+        padding: 100px;
+    }
     > img {
         position: absolute;
         right: 0;
         bottom: 0;
         top: -100px;
+        z-index: -1;
     }
     .container {
-        padding: 150px 0 0 0;
+        padding: 50px 0 0 0;
+        @media screen and (min-width: 576px) {
+            padding: 150px 0 0 0;
+        }
         > a {
             font-size: 1.313rem;
 
@@ -17,18 +26,28 @@
             text-align: center;
         }
         .estimation {
-            max-width: 63%;
+            @media screen and (min-width: 992px) {
+                max-width: 63%;
+            }
         }
     }
     .tarifs-para {
-        font-size: 2.125rem;
+        font-size: 1.5rem;
         color: $color-010;
-        max-width: 60%;
+
         margin-top: 50px;
+        @media screen and (min-width: 576px) {
+            font-size: 2.125rem;
+        }
+        @media screen and (min-width: 1200px) {
+            max-width: 60%;
+        }
     }
     h4 {
-        max-width: 60%;
         text-align: center;
+        @media screen and (min-width: 992px) {
+            max-width: 60%;
+        }
         &::before {
             content: '';
             position: absolute;
@@ -41,6 +60,11 @@
             transform: skew(320deg) rotate(356deg);
         }
     }
+    h5 {
+        @media screen and (max-width: 576px) {
+            font-size: 1.2rem;
+        }
+    }
     .img-wrapper {
         width: 200px;
         height: 200px;
@@ -51,12 +75,19 @@
     }
     .container > ul {
         list-style: none;
-        margin-bottom: 400px;
         margin-top: 100px;
         position: relative;
         margin-left: 0;
         padding-left: 0;
-        min-height: 600px;
+        min-height: 1500px;
+        @media screen and (min-width: 576px) {
+            min-height: 1200px;
+        }
+        @media screen and (min-width: 992px) {
+            min-height: 600px;
+            margin-bottom: 400px;
+        }
+
         @media screen and (min-width: 1400px) {
             min-height: fit-content;
             min-height: -moz-fit-content;
@@ -84,22 +115,46 @@
         }
     }
     #list-5 {
-        left: 20%;
+        left: 0;
+        @media screen and (min-width: 576px) {
+            left: 20%;
+        }
+        @media screen and (min-width: 992px) {
+            left: 0;
+        }
         @media screen and (min-width: 1400px) {
             left: 5%;
         }
     }
 
     #list-6 {
-        left: 50%;
+        left: 0;
+        top: 20%;
+        @media screen and (min-width: 576px) {
+            left: 11%;
+            top: 25%;
+        }
+
+        @media screen and (min-width: 992px) {
+            left: 50%;
+            top: 0;
+        }
         @media screen and (min-width: 1400px) {
             left: 24%;
         }
     }
 
     #list-7 {
-        left: 20%;
-        top: 60%;
+        left: 0;
+        top: 45%;
+        @media screen and (min-width: 576px) {
+            left: 16%;
+            top: 50%;
+        }
+        @media screen and (min-width: 992px) {
+            left: 0;
+            top: 60%;
+        }
         @media screen and (min-width: 1400px) {
             left: 50%;
             top: 0;
@@ -107,8 +162,16 @@
     }
 
     #list-8 {
-        left: 50%;
-        top: 60%;
+        left: 0;
+        top: 70%;
+        @media screen and (min-width: 576px) {
+            left: 15%;
+            top: 75%;
+        }
+        @media screen and (min-width: 992px) {
+            left: 50%;
+            top: 60%;
+        }
         @media screen and (min-width: 1400px) {
             left: 73%;
             top: 0;
@@ -118,15 +181,21 @@
         background-color: $color-010;
         padding: 45px 25px;
         border-radius: 20px;
-        max-width: 55%;
         visibility: hidden;
         position: relative;
+        margin: -1180px 0 100px 0;
+        @media screen and (min-width: 576px) {
+            margin: -900px 0 100px 0;
+        }
+        @media screen and (min-width: 992px) {
+            margin: -690px 0 100px 25%;
+            max-width: 55%;
+        }
         @media screen and (min-width: 1100px) {
             margin: -900px 0 100px 40%;
         }
-        margin: -900px 0 100px 30%;
         @media screen and (min-width: 1400px) {
-            margin: -200px auto 100px auto;
+            margin: -200px auto 100px 30%;
         }
         i {
             color: $color-002;
@@ -137,6 +206,10 @@
         }
         p {
             color: $color-002;
+            overflow-wrap: break-word;
+            @media screen and (max-width: 576px) {
+                font-size: 1rem;
+            }
         }
         ul {
             margin-bottom: 20px;

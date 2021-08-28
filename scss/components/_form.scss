@@ -20,15 +20,25 @@ form {
     }
     .form-wrapper {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
+        @media screen and (min-width: 576px) {
+            flex-direction: row;
+        }
         input {
-            width: 49%;
+            @media screen and (min-width: 576px) {
+                max-width: 49%;
+            }
         }
     }
     .btn-send {
         @extend button;
-        width: 50%;
+        padding: 5px 10px;
         margin-right: 0;
+        @media screen and (min-width: 576px) {
+            width: 50%;
+            padding: 15px 50px;
+        }
     }
     .btn-wrapper {
         text-align: center;

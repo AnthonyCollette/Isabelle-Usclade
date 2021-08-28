@@ -16,8 +16,12 @@ footer {
         bottom: 150%;
         left: 22%;
         transform: rotateY(180deg);
-        svg path {
-            fill: $color-006;
+        z-index: -1;
+        svg {
+            width: 80%;
+            path {
+                fill: $color-006;
+            }
         }
     }
     .butterfly-footer-2 {
@@ -25,8 +29,12 @@ footer {
         bottom: 110%;
         left: 30%;
         transform: rotateY(180deg) rotate(30deg);
-        svg path {
-            fill: $color-005;
+        z-index: -1;
+        svg {
+            width: 60%;
+            path {
+                fill: $color-005;
+            }
         }
     }
     .butterfly-footer-3 {
@@ -120,7 +128,7 @@ footer {
     }
     > img {
         position: absolute;
-        bottom: 98%;
+        bottom: 99%;
         z-index: 1;
         right: 7%;
         width: 20%;
