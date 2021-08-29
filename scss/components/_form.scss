@@ -1,5 +1,10 @@
 form {
-    max-width: 675px;
+    max-width: 90%;
+    margin: 0 auto;
+    @media screen and (min-width: 992px) {
+        max-width: 675px;
+        min-width: 500px;
+    }
     input,
     textarea {
         background-color: $color-012;

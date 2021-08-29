@@ -139,7 +139,7 @@
                                     </g>
                                 </svg>
                             </button>
-                            <form action="POST">
+                            <form action="php/send_email.php" method="POST">
                                 <div class="form-wrapper">
                                     <input type="text" name="firstname" id="firstname" placeholder="Prénom" required />
                                     <input type="text" name="name" id="name" placeholder="Nom" required />
@@ -151,7 +151,7 @@
                                 <input type="text" name="object" id="object" placeholder="Je souhaite avoir une information sur..." required />
                                 <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
                                 <div class="btn-wrapper">
-                                    <input type="submit" value="Envoyer" id="btn-send" class="btn-send" />
+                                    <input type="submit" name="submit" value="Envoyer" id="btn-send" class="btn-send" />
                                 </div>
                             </form>
                         </div>

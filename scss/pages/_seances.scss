@@ -13,9 +13,7 @@
         width: 200px;
         height: 200px;
         border-radius: 130px;
-        background-image: url('/images/seances1.jpg');
         background-size: cover;
-        background-position: -80px;
     }
     .text-wrapper {
         margin-top: -10%;
@@ -25,7 +23,7 @@
         align-items: center;
         p {
             font-family: $secondary-font-black;
-            font-size: 2rem;
+            font-size: 1rem;
             color: $color-005;
             @media screen and (min-width: 992px) {
                 font-size: 1.313rem;
@@ -69,9 +67,12 @@
             padding: 45px 25px;
             border-radius: 20px;
             max-width: 100%;
-            margin: -930px auto 100px auto;
+            margin: -910px auto 100px auto;
             visibility: hidden;
             position: relative;
+            @media screen and (min-width: 405px) {
+                margin: -930px auto 100px auto;
+            }
             @media screen and (min-width: 992px) {
                 max-width: 55%;
                 margin: -520px 0 100px 40%;
@@ -94,12 +95,14 @@
             }
             ul {
                 margin-bottom: 20px;
-                margin-left: 50px;
+                @media screen and (min-width: 992px) {
+                    margin-left: 50px;
+                }
             }
 
             li {
                 color: $color-002;
-                font-size: 2rem;
+                font-size: 1rem;
                 @media screen and (min-width: 992px) {
                     font-size: 1.313rem;
                 }
@@ -116,8 +119,11 @@
 }
 
 #list-1 {
-    left: 25%;
+    left: 5%;
     top: 0;
+    @media screen and (min-width: 405px) {
+        left: 25%;
+    }
     @media screen and (min-width: 992px) {
         left: 10%;
     }
@@ -131,8 +137,11 @@
 }
 
 #list-2 {
-    left: 25%;
+    left: 5%;
     top: 25%;
+    @media screen and (min-width: 405px) {
+        left: 25%;
+    }
     @media screen and (min-width: 992px) {
         left: 60%;
         top: 0;
@@ -146,8 +155,12 @@
 }
 
 #list-3 {
-    left: 25%;
-    top: 50%;
+    left: 5%;
+    top: 52%;
+    @media screen and (min-width: 405px) {
+        left: 25%;
+        top: 50%;
+    }
     @media screen and (min-width: 992px) {
         top: 50%;
         left: 10%;
@@ -162,8 +175,12 @@
 }
 
 #list-4 {
-    left: 35%;
-    top: 75%;
+    left: 15%;
+    top: 80%;
+    @media screen and (min-width: 405px) {
+        left: 35%;
+        top: 75%;
+    }
     @media screen and (min-width: 992px) {
         top: 50%;
         left: 63%;
@@ -191,4 +208,18 @@
 .apparition {
     opacity: 100%;
     visibility: visible !important;
+}
+
+.img-1 {
+    background-image: url('/images/seances1.jpg');
+    background-position: -80px;
+}
+.img-2 {
+    background-image: url('/images/ados.jpg');
+}
+.img-3 {
+    background-image: url('/images/enfant.jpg');
+}
+.img-4 {
+    background-image: url('/images/groupe.jpg');
 }

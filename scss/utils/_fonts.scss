@@ -50,8 +50,8 @@ h1 {
     color: $color-001;
     font-family: $secondary-font-black;
     font-weight: 900;
-
-    font-size: 2.8rem;
+    z-index: 99;
+    font-size: 2rem;
     position: relative;
     width: fit-content;
     width: -moz-fit-content;
@@ -65,9 +65,12 @@ h1 {
         height: 30px;
         background-color: $color-005;
         z-index: -1;
-        top: 30px;
+        top: 10px;
         left: 30px;
         transform: skew(320deg) rotate(356deg);
+        @media screen and (min-width: 992px) {
+            top: 30px;
+        }
     }
 }
 
@@ -84,11 +87,15 @@ h4 {
     color: $color-005;
     font-family: $secondary-font-black;
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
     position: relative;
     width: fit-content;
     width: -moz-fit-content;
     margin-bottom: 0;
+    @media screen and (min-width: 576px) {
+        font-size: 2.5rem;
+    }
     @media screen and (min-width: 992px) {
         font-size: 2.125rem;
     }
@@ -120,6 +127,7 @@ h6 {
     font-size: 5rem;
     color: $color-001;
     line-height: 1;
+    text-align: center;
     @media screen and (min-width: 992px) {
         font-size: 3.438rem;
         line-height: 1.2;
@@ -130,6 +138,7 @@ p {
     color: $color-003;
     font-family: $secondary-font-regular;
     font-size: 1.2rem;
+    overflow-wrap: break-word;
     @media screen and (min-width: 992px) {
         font-size: 1.313rem;
     }

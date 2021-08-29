@@ -44,7 +44,8 @@ h1 {
   color: #493e5b;
   font-family: "Segoe UI Black";
   font-weight: 900;
-  font-size: 2.8rem;
+  z-index: 99;
+  font-size: 2rem;
   position: relative;
   width: -webkit-fit-content;
   width: fit-content;
@@ -64,10 +65,16 @@ h1::before {
   height: 30px;
   background-color: #799be8;
   z-index: -1;
-  top: 30px;
+  top: 10px;
   left: 30px;
   -webkit-transform: skew(320deg) rotate(356deg);
           transform: skew(320deg) rotate(356deg);
+}
+
+@media screen and (min-width: 992px) {
+  h1::before {
+    top: 30px;
+  }
 }
 
 h2 {
@@ -86,12 +93,19 @@ h4 {
   color: #799be8;
   font-family: "Segoe UI Black";
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  text-align: center;
   position: relative;
   width: -webkit-fit-content;
   width: fit-content;
   width: -moz-fit-content;
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 576px) {
+  h4 {
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -131,6 +145,7 @@ h6 {
   font-size: 5rem;
   color: #493e5b;
   line-height: 1;
+  text-align: center;
 }
 
 @media screen and (min-width: 992px) {
@@ -144,6 +159,7 @@ p {
   color: #000;
   font-family: "Segoe UI Regular";
   font-size: 1.2rem;
+  overflow-wrap: break-word;
 }
 
 @media screen and (min-width: 992px) {
@@ -355,7 +371,6 @@ strong {
 }
 
 .header {
-  z-index: 999;
   position: relative;
   overflow: hidden;
   padding-bottom: 300px;
@@ -474,6 +489,12 @@ strong {
     font-size: 9rem;
     margin-top: 0;
   }
+}
+
+.header h1::before {
+  content: '';
+  width: 0;
+  height: 0;
 }
 
 .header h2 {
@@ -635,6 +656,7 @@ strong {
   position: absolute;
   right: 0;
   top: -100px;
+  z-index: -1;
 }
 
 .quisuisje .container {
@@ -706,9 +728,7 @@ strong {
   }
 }
 
-.quisuisje .wrapper .text-wrapper img {
-  -o-object-fit: none;
-     object-fit: none;
+.quisuisje .wrapper .text-wrapper .logo-wrapper > img {
   height: -webkit-fit-content;
   height: fit-content;
   height: -moz-fit-content;
@@ -740,10 +760,17 @@ strong {
 }
 
 .quisuisje .wrapper img {
-  width: 350px;
-  height: 350px;
+  width: 200px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (min-width: 992px) {
+  .quisuisje .wrapper img {
+    width: 350px;
+    height: 350px;
+  }
 }
 
 .quisuisje .wrapper figure {
@@ -1064,9 +1091,7 @@ footer > img {
   width: 200px;
   height: 200px;
   border-radius: 130px;
-  background-image: url("/images/seances1.jpg");
   background-size: cover;
-  background-position: -80px;
 }
 
 .tarifs .container > ul {
@@ -1305,6 +1330,23 @@ footer > img {
   color: #edc5cc;
 }
 
+.img-5 {
+  background-image: url("/images/seances1.jpg");
+  background-position: -80px;
+}
+
+.img-6 {
+  background-image: url("/images/enfantetados.jpg");
+}
+
+.img-7 {
+  background-image: url("/images/groupe.jpg");
+}
+
+.img-8 {
+  background-image: url("/images/organisme.jpg");
+}
+
 .seances {
   padding: 20vh 0;
   background-image: url("/images/bg-seances.png");
@@ -1324,9 +1366,7 @@ footer > img {
   width: 200px;
   height: 200px;
   border-radius: 130px;
-  background-image: url("/images/seances1.jpg");
   background-size: cover;
-  background-position: -80px;
 }
 
 .seances .text-wrapper {
@@ -1346,7 +1386,7 @@ footer > img {
 
 .seances .text-wrapper p {
   font-family: "Segoe UI Black";
-  font-size: 2rem;
+  font-size: 1rem;
   color: #799be8;
 }
 
@@ -1409,9 +1449,15 @@ footer > img {
   padding: 45px 25px;
   border-radius: 20px;
   max-width: 100%;
-  margin: -930px auto 100px auto;
+  margin: -910px auto 100px auto;
   visibility: hidden;
   position: relative;
+}
+
+@media screen and (min-width: 405px) {
+  .seances .container .details-seances {
+    margin: -930px auto 100px auto;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1447,12 +1493,17 @@ footer > img {
 
 .seances .container .details-seances ul {
   margin-bottom: 20px;
-  margin-left: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .seances .container .details-seances ul {
+    margin-left: 50px;
+  }
 }
 
 .seances .container .details-seances li {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -1470,8 +1521,14 @@ footer > img {
 }
 
 #list-1 {
-  left: 25%;
+  left: 5%;
   top: 0;
+}
+
+@media screen and (min-width: 405px) {
+  #list-1 {
+    left: 25%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1493,8 +1550,14 @@ footer > img {
 }
 
 #list-2 {
-  left: 25%;
+  left: 5%;
   top: 25%;
+}
+
+@media screen and (min-width: 405px) {
+  #list-2 {
+    left: 25%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1517,8 +1580,15 @@ footer > img {
 }
 
 #list-3 {
-  left: 25%;
-  top: 50%;
+  left: 5%;
+  top: 52%;
+}
+
+@media screen and (min-width: 405px) {
+  #list-3 {
+    left: 25%;
+    top: 50%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1542,8 +1612,15 @@ footer > img {
 }
 
 #list-4 {
-  left: 35%;
-  top: 75%;
+  left: 15%;
+  top: 80%;
+}
+
+@media screen and (min-width: 405px) {
+  #list-4 {
+    left: 35%;
+    top: 75%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1583,8 +1660,33 @@ footer > img {
   visibility: visible !important;
 }
 
+.img-1 {
+  background-image: url("/images/seances1.jpg");
+  background-position: -80px;
+}
+
+.img-2 {
+  background-image: url("/images/ados.jpg");
+}
+
+.img-3 {
+  background-image: url("/images/enfant.jpg");
+}
+
+.img-4 {
+  background-image: url("/images/groupe.jpg");
+}
+
 form {
-  max-width: 675px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+  form {
+    max-width: 675px;
+    min-width: 500px;
+  }
 }
 
 form input,
@@ -1671,7 +1773,13 @@ form .btn-wrapper {
 
 .contact {
   margin: 0 0 200px 0;
-  padding-top: 200px;
+  padding-top: 120px;
+}
+
+@media screen and (min-width: 992px) {
+  .contact {
+    padding-top: 200px;
+  }
 }
 
 .contact .contact-wrapper {
@@ -1717,6 +1825,8 @@ form .btn-wrapper {
 @media screen and (min-width: 992px) {
   .contact .text-wrapper {
     max-width: 30%;
+    min-width: 450px;
+    margin-right: 5vw;
   }
 }
 
@@ -1807,7 +1917,7 @@ button:hover, form .btn-send:hover {
   padding: 0;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 992px) {
   #form #arrow-form {
     margin: -40px 0 0 -80px;
   }
@@ -1830,18 +1940,25 @@ button:hover, form .btn-send:hover {
 
 .butterfly-form {
   position: absolute;
-  top: 100%;
-  right: 11%;
+  top: -60%;
+  right: -15%;
   -webkit-transform: rotateY(198deg) rotateX(328deg);
           transform: rotateY(198deg) rotateX(328deg);
   -webkit-transition: 1s;
   transition: 1s;
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .butterfly-form {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .butterfly-form {
-    top: 23%;
-    right: 11%;
+    top: -50%;
+    right: -16%;
   }
 }
 
@@ -1850,6 +1967,11 @@ button:hover, form .btn-send:hover {
   color: #799be8;
   max-width: 80%;
   text-align: center;
+  margin: 0 auto;
+}
+
+.formulaire {
+  position: relative;
 }
 
 @-webkit-keyframes disparition {

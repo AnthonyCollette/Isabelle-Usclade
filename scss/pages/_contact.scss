@@ -1,6 +1,9 @@
 .contact {
     margin: 0 0 200px 0;
-    padding-top: 200px;
+    padding-top: 120px;
+    @media screen and (min-width: 992px) {
+        padding-top: 200px;
+    }
     .contact-wrapper {
         display: flex;
         flex-direction: column;
@@ -19,6 +22,8 @@
         margin-top: 50px;
         @media screen and (min-width: 992px) {
             max-width: 30%;
+            min-width: 450px;
+            margin-right: 5vw;
         }
     }
     p {
@@ -90,7 +95,7 @@ button {
         background-color: transparent;
         margin: 0 0 20px 0;
         padding: 0;
-        @media screen and (min-width: 576px) {
+        @media screen and (min-width: 992px) {
             margin: -40px 0 0 -80px;
         }
     }
@@ -107,13 +112,17 @@ button {
 }
 .butterfly-form {
     position: absolute;
-    top: 100%;
-    right: 11%;
+    top: -60%;
+    right: -15%;
     transform: rotateY(198deg) rotateX(328deg);
     transition: 1s;
+    display: none;
+    @media screen and (min-width: 576px) {
+        display: block;
+    }
     @media screen and (min-width: 992px) {
-        top: 23%;
-        right: 11%;
+        top: -50%;
+        right: -16%;
     }
 }
 .thanks {
@@ -121,4 +130,9 @@ button {
     color: $color-005;
     max-width: 80%;
     text-align: center;
+    margin: 0 auto;
+}
+
+.formulaire {
+    position: relative;
 }

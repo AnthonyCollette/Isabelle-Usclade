@@ -69,9 +69,7 @@
         width: 200px;
         height: 200px;
         border-radius: 130px;
-        background-image: url('/images/seances1.jpg');
         background-size: cover;
-        background-position: -80px;
     }
     .container > ul {
         list-style: none;
@@ -225,4 +223,20 @@
             color: $color-011;
         }
     }
+}
+
+.img-5 {
+    background-image: url('/images/seances1.jpg');
+    background-position: -80px;
+}
+
+.img-6 {
+    background-image: url('/images/enfantetados.jpg');
+}
+
+.img-7 {
+    background-image: url('/images/groupe.jpg');
+}
+.img-8 {
+    background-image: url('/images/organisme.jpg');
 }
