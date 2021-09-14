@@ -24,13 +24,22 @@ $('#arrow-form').click('#arrow-form', () => {
     $('#butterfly-form').css('right', '-15%')
 })
 
-$('#btn-send').click('#btn-send', () => {
+$('#btn-send').click('#btn-send', (e) => {
+    e.preventDefault
     if (firstname.value != '' && name.value != '' && email.value != '' && phone.value != '' && object.value != '' && message.value != '') {
         $('#form').removeClass('display-block')
         $('#form').addClass('diplay-none')
         $('#thanks').addClass('display-block')
         $('#butterfly-form').css('top', '-100%')
         $('#butterfly-form').css('right', '2%')
+        $.ajax({
+            type: 'POST',
+            url: 'php/send_email.php',
+            data: $('#formData').serialize(),
+            success: function () {
+                console.log('Mail envoyé !')
+            },
+        })
     } else {
         alert('Merci de remplir tous les champs')
     }

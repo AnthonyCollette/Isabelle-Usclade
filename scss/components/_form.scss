@@ -40,6 +40,8 @@ form {
         @extend button;
         padding: 5px 10px;
         margin-right: 0;
+        cursor: pointer;
+        text-align: center;
         @media screen and (min-width: 576px) {
             width: 50%;
             padding: 15px 50px;

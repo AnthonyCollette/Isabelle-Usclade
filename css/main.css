@@ -1759,6 +1759,8 @@ form .form-wrapper {
 form .btn-send {
   padding: 5px 10px;
   margin-right: 0;
+  cursor: pointer;
+  text-align: center;
 }
 
 @media screen and (min-width: 576px) {
