@@ -30,3 +30,18 @@ strong {
 .display-block {
     display: block !important;
 }
+
+#cookiescript_badge {
+    display: none !important;
+}
+
+#cookiescript_injected {
+    background-color: $color-001 !important;
+    #cookiescript_accept {
+        background-color: $color-002;
+        color: $color-001;
+    }
+    #cookiescript_reject {
+        background-color: $color-001;
+    }
+}
